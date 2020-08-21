@@ -1,1 +1,1 @@
-# NihongoNumberTranslater.github.io
+# NihongoNumberTranslator.github.io
