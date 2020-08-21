@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Japanese number translator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="numbertranslator.css">
+        <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="container">
+        <h1 class="title">NihongoNumber Translator</h1>
+        <p> <i class="fas fa-language"></i> Convert your English numbers into Japanese and vise versa.</p>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <p>Translation Settings <i class="fas fa-level-down-alt"></i> </p>
+        <button type="button" class="btn btn-info" id="onClickBtn" onclick="pressTranslationTypeButton(this.id)">On Click</button>
+        <button type="button" class="btn btn-info" id="onTypeBtn" onclick="pressTranslationTypeButton(this.id)">On Type</button>
+        </div>
+<!-- TRANSLATION ON TYPE -->
+        <div id="onTypeDiv" class="container hide">
+            <div class="row , textarea" >
+                <div id="leftTextArea1" class="col"> 
+                    <p id="leftText1">English</p>
+                    <form>
+                    <div class="form-group">
+                        <textarea class="form-control" style="font-size: 2.5rem" class="md-textarea form-control" id="userInput1" rows="2" oninput="numberTranslate()"></textarea>
+                    </div>
+                    </form>
+                </div>
+                <div id="rightTextArea1" class="col">
+                    <p id="rightText1">日本語</p>
+                    <form>
+                    <div class="form-group">
+                        <p  id="rightTextarea1"></p>
+                    </div>
+                    </form>        
+                </div>
+            </div>   
+            <p onclick="showExample()"><i class="fas fa-chevron-circle-right"></i> Example<br> <span id="examples1" class="hide">EN: 123456789<br>JP: 1億2345万6千7百8十9</span></p>
+             <input type="checkbox" checked data-toggle="toggle" class="languageSelect" data-on="EN" data-off="JP">   
+            <button type="button" class="btn btn-info" onclick="clearTextBox()">Clear</button>
+        </div>
+<!-- TRANSLATION ON CLICK -->
+<div id="onClickDiv" class="container hide">
+    <div class="row , textarea" >
+        <div id="leftTextArea2" class="col"> 
+            <p id="leftText2">English</p>
+            <form>
+            <div class="form-group">
+                <textarea class="form-control" style="font-size: 2.5rem" class="md-textarea form-control" id="userInput2" rows="2"></textarea>
+            </div>
+            </form>
+        </div>
+        <div id="rightTextArea" class="col">
+            <p id="rightText2">日本語</p>
+            <form>
+            <div class="form-group">
+                <p  id="rightTextarea2"></p>
+            </div>
+            </form>        
+        </div>
+    </div>   
+    <p onclick="showExample()"><i class="fas fa-chevron-circle-right"></i> Example<br> <span id="examples2" class="hide">EN: 123456789<br>JP: 1億2345万6千7百8十9</span></p>
+    <input type="checkbox" checked data-toggle="toggle" class="languageSelect" data-on="EN" data-off="JP">   
+    <button type="button" class="btn btn-info" onclick="clearTextBox()">Clear</button>
+    <button type="button" class="btn btn-success" onclick="numberTranslate()">Translate</button>
+</div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+        <script src="numbertranslator.js" async defer></script>
+    </body>
+</html>

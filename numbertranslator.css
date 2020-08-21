@@ -1,0 +1,36 @@
+html,body {
+    font-family: 'Raleway', sans-serif;
+    padding: 2em 2em;
+    font-size: 20px;
+    background: #222;
+    color: #aaa
+  }
+
+.title{
+    font-size: 9rem;
+    color:white;
+    font-weight: 100;
+} 
+
+.container{ 
+    margin-top: 10px;
+    margin-bottom: 35px;
+    margin-left: 1rem;
+}
+
+
+.textarea{
+    margin: auto;
+    /* border: solid 1px black; */
+    text-align: center;
+}
+
+
+.form-group{
+    font-size: 2.25rem;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.hide{
+    display: none;
+}
